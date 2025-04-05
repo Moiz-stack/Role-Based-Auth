@@ -14,7 +14,7 @@ const userSchema = new moongoose.Schema(
     role: {
       type: String,
       required: true,
-      enum: ["user", "admin", "managerr"]
+      enum: ["user", "admin", "manager"]
     },
   },
   { timestamps: true }

@@ -35,8 +35,9 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    const { username, password } = req.body;
-    const User = await user.findOne({ username });
+    const { userName, password } = req.body;
+    const User = await user.findOne({ userName });
+    console.log(User);
     if (!User) {
       return res.status(404).json({
         status: "fail",
